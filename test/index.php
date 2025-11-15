@@ -10,28 +10,40 @@
     <div class="container d-flex justify-content-center align-items-center vh-100">
         <div class="card p-4 shadow" style="width: 400px;">
             <h3 class="text-center mb-4">Login</h3>
+
             <form method="POST" action="login-submit.php">
-                <div class="mb-3">
-                    <?php 
-                        if(isset($_GET['error'])) {
+                <!-- Error messages -->
+                <?php 
+                    if(isset($_GET['error'])) {
                         $error = $_GET['error'];
-                        if ($error == "email") {
-                            echo '<p class="text-danger">Incorrect Email</p>';
-                        } else if ($error == "password") {
-                            echo '<p class="text-danger">Incorrect Password</p>';
+                        if ($error === "email") {
+                            echo '<p class="text-danger text-center">Incorrect Email</p>';
+                        } else if ($error === "password") {
+                            echo '<p class="text-danger text-center">Incorrect Password</p>';
+                        } else if ($error === "not_logged_in") {
+                            echo '<p class="text-danger text-center">You must log in first</p>';
                         }
                     }
-                    ?>
+                ?>
+
+                <!-- Email input -->
+                <div class="mb-3">
                     <label for="email" class="form-label">Email</label>
-                    <input name="email" type="email" class="form-control" id="email" placeholder="Enter your email" required>
+                    <input name="Email" type="email" class="form-control" id="email" placeholder="Enter your email" required>
                 </div>
+
+                <!-- Password input -->
                 <div class="mb-3">
                     <label for="password" class="form-label">Password</label>
-                    <input name="password" type="password" class="form-control" id="password" placeholder="Enter your password" required>
+                    <input name="Password" type="password" class="form-control" id="password" placeholder="Enter your password" required>
                 </div>
+
                 <button name="submit" type="submit" class="btn btn-primary w-100">Login</button>
-                <br><br>
-                <p><center>Don't have an account? <a class="text-decoration-none m-2" href="signup.php">Sign Up</a> </p>
+
+                <p class="text-center mt-3">
+                    Don't have an account? 
+                    <a class="text-decoration-none" href="signup.php">Sign Up</a>
+                </p>
             </form>
         </div>
     </div>

@@ -10,26 +10,38 @@
     <div class="container d-flex justify-content-center align-items-center vh-100">
         <div class="card p-4 shadow" style="width: 400px;">
             <h3 class="text-center mb-4">Sign Up</h3>
+
             <form method="POST" action="signup-submit.php">
+                <!-- First Name -->
                 <div class="mb-3">
                     <label for="firstName" class="form-label">First Name</label>
-                    <input name="fname" type="text" class="form-control" id="firstName" placeholder="Enter your first name">
+                    <input name="FirstName" type="text" class="form-control" id="firstName" placeholder="Enter your first name" required>
                 </div>
+
+                <!-- Last Name -->
                 <div class="mb-3">
                     <label for="lastName" class="form-label">Last Name</label>
-                    <input name="lname" type="text" class="form-control" id="lastName" placeholder="Enter your last name">
+                    <input name="LastName" type="text" class="form-control" id="lastName" placeholder="Enter your last name" required>
                 </div>
+
+                <!-- Email -->
                 <div class="mb-3">
                     <label for="email" class="form-label">Email</label>
-                    <input name="email" type="email" class="form-control" id="email" placeholder="Enter your email">
+                    <input name="Email" type="email" class="form-control" id="email" placeholder="Enter your email" required>
                 </div>
+
+                <!-- Password -->
                 <div class="mb-3">
                     <label for="password" class="form-label">Password</label>
-                    <input name="password" type="password" class="form-control" id="password" placeholder="Enter your password">
+                    <input name="Password" type="password" class="form-control" id="password" placeholder="Enter your password" required>
                 </div>
+
                 <button name="submit" type="submit" class="btn btn-primary w-100">Sign Up</button>
-                <br><br>
-                <p><center>Already have an account?<a class="text-decoration-none m-2" href="login.php">Login</a></p>
+
+                <p class="text-center mt-3">
+                    Already have an account? 
+                    <a class="text-decoration-none" href="index.php">Login</a>
+                </p>
             </form>
         </div>
     </div>

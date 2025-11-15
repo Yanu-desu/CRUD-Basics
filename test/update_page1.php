@@ -41,7 +41,7 @@
                 die("Query Failed". mysqli_error($conn));
             }
             else {
-                header("Location: index.php?update_msg=Data Updated Successfully");
+                header("Location: table.php?update_msg=Data Updated Successfully");
             }
 
       }

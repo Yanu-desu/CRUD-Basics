@@ -11,7 +11,7 @@
     if(!$result) {
         die("Query Failed". mysqli_error($conn));
     } else {
-        header("Location: index.php?delete_msg=Data Deleted Successfully");
+        header("Location: table.php?delete_msg=Data Deleted Successfully");
 
     }
     }

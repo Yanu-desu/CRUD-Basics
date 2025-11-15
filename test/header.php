@@ -11,6 +11,6 @@
 
 </head>
 <body>
-    <h1 id="main_title">CRUD Trial</h1>
+    <h1 id="main_title">CRUD for Nerds UwU~</h1>
 
     <div class="container">
